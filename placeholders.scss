@@ -1,0 +1,13 @@
+//Basic grid setting
+%grid-center {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+// Grid left
+%grid-left {
+    display: grid;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
