@@ -543,3 +543,131 @@ main {
         }
     }
 }
+
+/* Responsive tel */
+@media screen and (max-width: 768px) {
+
+    main {
+
+        /*Page d'accueil*/
+        .localisation {
+            padding: 1em 2em 1em 1.5em;
+
+            i {
+                padding-right: 15px;
+            }
+        }
+
+        .presentation {
+            padding: 40px 0 60px 0;
+
+            h2 {
+                padding: 0 1rem;
+            }
+
+            p {
+                padding: 1em 2em 2em;
+                color: $gris-titre;
+            }
+        }
+    }
+
+    .fonctionnementRestaurantContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 20px;
+
+        .commentCaMarche {
+            width: 100%;
+            padding: 0 25px 50px 25px;
+
+
+            .list-item {
+                border-radius: 20px;
+                width: 100%;
+
+                i {
+                    padding: 1em 1.5em 1em 1.7em;
+                    font-size: 1.2em;
+                }
+
+                &:before {
+                    height: 25px;
+                    width: 25px;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        .lesRestaurants {
+            background-color: $gris-light-clair;
+            background-color: $gris-light-clair;
+            margin: 0;
+            width: auto;
+            padding: 50px 20px 30px 20px;
+
+            a {
+                img {
+                    height: 10rem;
+                }
+            }
+
+            ul {
+                display: grid !important;
+                grid-template-columns: repeat(1, 1fr);
+                column-gap: 2rem;
+                row-gap: 0.5rem;
+                padding: 1em 0;
+            }
+
+            h3 {
+                margin: 15px 5px 0 5px;
+            }
+
+
+            p {
+                margin: 0 0 15px 5px;
+            }
+
+            .sticker {
+                padding: 0.5rem 1rem 0.5rem 1rem;
+            }
+
+        }
+    }
+
+    footer {
+        ul {
+            font-size: 1rem;
+        }
+    }
+
+    /*Page resto*/
+    main {
+        .menuDuResto {
+            .menuDuResto__carte {
+                h3::after {
+                    width: 45px;
+                }
+
+                li {
+                    height: 80px;
+
+                    .list-item-content {
+                        h4 {
+                            font-size: 1.3rem;
+                        }
+
+                        p {
+                            font-size: 1.2rem;
+                        }
+
+                        strong {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
