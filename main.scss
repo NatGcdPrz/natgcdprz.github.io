@@ -447,3 +447,80 @@ main {
 
 
 }
+
+/* Responsive taille d'écran classique */
+@media screen and (min-width: 1440px) {
+    .fonctionnementRestaurantContainer {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+
+        .commentCaMarche {
+            position: sticky;
+            top: 20px;
+            height: min-content;
+        }
+
+        .lesRestaurants {
+            background-color: $gris-light-clair;
+            margin: 0;
+            margin-bottom: 50px;
+            width: auto;
+            padding: 50px 30px;
+
+            .list-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                i {
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+            }
+        }
+
+    }
+
+    .menuDuResto__carte {
+        margin: -4rem 50px 0 50px;
+        padding: 0 50px;
+    }
+}
+
+@media screen and (min-width: 990px) and (max-width: 1440px) {
+
+    .fonctionnementRestaurantContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 20px;
+        justify-content: center;
+
+        .commentCaMarche {
+            padding-left: 20px;
+        }
+
+        .lesRestaurants {
+            background-color: $gris-light-clair;
+            margin: 0;
+            width: auto;
+            padding-top: 20px;
+            padding: 50px 30px;
+
+            .list-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                i {
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+            }
+        }
+
+    }
+}
