@@ -1,0 +1,42 @@
+/* Début Header */
+header {
+    @extend %grid-center;
+    @include grid-template-set($header);
+    padding: 1em;
+}
+
+h1 {
+    @include grid-pos-set(1, auto, 1, auto);
+}
+
+/* Début Header à la Française */
+
+.headerGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    h1 {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+}
+
+.btn__retourHome {
+    grid-area: 1 / 1 / 2 / 2;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        padding-top: 10px;
+    }
+
+    .localisation {
+        h2 {
+            color: $gris-sombre;
+        }
+    }
+}
