@@ -54,3 +54,64 @@ main {
     }
 
     /* Fin section presentation */
+
+    /* Début container fonctionnement & restaurant */
+    & .fonctionnementRestaurantContainer {
+        padding: 50px 0px;
+        padding-bottom: 0;
+    }
+
+    /* Fin container fonctionnement & restaurant */
+
+    /* Début section fonctionnement */
+    & .commentCaMarche {
+        width: 70%;
+        padding: 50px 30px;
+
+
+        .list-item {
+            @extend %grid-left;
+            @include grid-template-set ($presentation);
+            padding: 1em 0;
+            border-radius: 20px;
+            background-color: ($gris-light-clair);
+            box-shadow: -1px 12px 19px 4px ($gris-clair);
+            margin: 1.5rem 0;
+            position: relative;
+
+
+
+            &:hover {
+                background-color: lighten($violet-primaire, 35%);
+
+                i {
+                    color: ($violet-primaire);
+                }
+            }
+
+            &:before {
+                display: grid;
+                align-content: center;
+                justify-content: center;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color: $violet-primaire;
+                border-radius: 100%;
+                height: 30px;
+                width: 30px;
+                font-size: 1.6rem;
+                color: white;
+                counter-increment: compteur-list-fonctionnement;
+                content: counter(compteur-list-fonctionnement);
+            }
+
+            i {
+                padding: 1em;
+                color: ($gris-icon);
+            }
+
+        }
+    }
+
+    /*  Fin section fonctionnement */
