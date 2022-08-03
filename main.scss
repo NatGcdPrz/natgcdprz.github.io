@@ -524,3 +524,22 @@ main {
 
     }
 }
+
+/* Responsive tablette */
+@media screen and (min-width: 768px) and (max-width: 995px) {
+    .fonctionnementRestaurantContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 20px;
+
+        .lesRestaurants {
+            background-color: $gris-light-clair;
+            margin: 0;
+            padding: 50px 30px 0 30px;
+
+            .list-item {
+                width: 100%;
+            }
+        }
+    }
+}
