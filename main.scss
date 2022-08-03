@@ -239,3 +239,211 @@ main {
     }
 
     /*Fin section restaurant*/
+
+    /*Pages*/
+    & .menuDuResto {
+        border-radius: 2rem 2rem 0 0;
+        background-color: $gris-clair;
+        z-index: 1;
+        position: relative;
+
+        .menuDuResto__cover {
+            max-width: 100%;
+            max-height: 20rem;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .menuDuResto__carte {
+            margin-top: -4rem;
+            border-radius: 2rem 2rem 0 0;
+            background-color: #f6f6f6;
+            z-index: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                font-family: Shrikhand, "cursive";
+                padding: 2rem 2rem 1rem 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                font-size: 1.7rem;
+
+                button {
+                    position: relative;
+
+                    i {
+                        top: 0;
+                        right: 0;
+                        font-size: 40px;
+                    }
+
+                    &:hover {
+                        .heart-away {
+                            opacity: 0;
+                        }
+
+                        .heart-hover {
+                            opacity: 1;
+                            animation: fadeIn-heart 1s ease 0s 1 normal forwards;
+                        }
+                    }
+                }
+
+                .heart-away {
+                    transition: all 200ms ease-in-out;
+                }
+
+
+
+                .heart-hover {
+                    position: absolute;
+                    color: transparent;
+                    background-image: radial-gradient(100% 50% at 20% 10%, #FF79DA 0%, #9356DC 200%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    opacity: 0;
+                    transition: all 200ms ease-in-out;
+                }
+
+
+            }
+
+            h3 {
+                text-transform: uppercase;
+                position: relative;
+                padding: 2rem 0 0.5rem 1.5rem;
+                font-weight: 400;
+
+                &::after {
+                    content: '';
+                    border-bottom: 5px solid $vert-clair;
+                    width: 80px;
+                    display: block;
+                    margin: 10px 0 0 0.1rem;
+                }
+            }
+
+            ul {
+                max-width: 100%;
+                padding: 0 1rem;
+            }
+
+            li {
+                margin: 1rem 0;
+                background: white;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 100px;
+                padding: 0;
+                overflow: hidden;
+                opacity: 0;
+
+
+
+                @for $i from 1 through 9 {
+                    &:nth-child(#{$i}) {
+                        @include animationDelay($i * (0.2s));
+                        animation-fill-mode: forwards;
+                    }
+                }
+
+                h4 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                }
+
+                strong {
+                    font-weight: 700;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    padding-left: 0.5rem;
+                }
+
+
+                .list-item-content {
+                    height: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(6, 1fr);
+                    grid-template-rows: repeat(2, 1fr);
+                    grid-column-gap: 0px;
+                    grid-row-gap: 0px;
+                    align-items: center;
+                    width: 100%;
+                    padding-left: 15px;
+
+
+                    h4 {
+                        grid-area: 1 / 1 / 2 / 7;
+                        align-self: end;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+
+                    p {
+                        grid-area: 2 / 1 / 3 / 6;
+                        align-self: start;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        width: 95%;
+                    }
+
+                    strong {
+                        grid-area: 2 / 5 / 3 / 7;
+                        align-self: start;
+                        padding-right: 20px;
+                        font-size: 1.5rem;
+                    }
+
+                }
+
+                .list-item-check {
+                    height: 100%;
+                    margin-right: -100px;
+                    background-color: $vert-clair;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    width: 90px;
+                    font-size: 2rem;
+                    transition: all 1s;
+                }
+
+                &:hover {
+
+                    .list-item-check {
+                        margin-right: 0;
+
+                        i {
+                            animation: checkSpin 0.8s ease-in-out;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        a {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            margin: 2rem 0 4rem 0;
+        }
+    }
+
+
+}
