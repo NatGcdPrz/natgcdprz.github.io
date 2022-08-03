@@ -115,3 +115,127 @@ main {
     }
 
     /*  Fin section fonctionnement */
+    /* Début section Restaurant */
+    & .lesRestaurants {
+        width: 100%;
+        padding: 50px 30px 0 30px;
+
+        ul {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 2rem;
+            row-gap: 2rem;
+            padding: 1em 0;
+        }
+
+        li {
+            background: #fff;
+            border-radius: 1rem;
+            position: relative;
+            display: block;
+            margin: 0.5rem 0;
+            box-shadow: 0.25rem 0.25rem 0.5rem #00000012;
+        }
+
+        img {
+            width: 100%;
+            height: 20rem;
+            border-radius: 1rem 1rem 0 0;
+            box-shadow: none;
+            object-fit: cover;
+        }
+
+        h3,
+        p {
+            text-decoration: none;
+            margin: 5px;
+            color: black;
+
+        }
+
+        .sticker {
+            background: $aqua-tertiaire;
+            color: $txt-fond-vert;
+            padding: 0.5rem;
+            border-radius: 0.125rem;
+            position: absolute;
+            top: 1rem;
+            right: 0.75rem;
+        }
+
+        a {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+
+            img {
+                grid-area: 1 / 1 / 4 / 6;
+            }
+
+            h3 {
+                grid-area: 4 / 1 / 5 / 4;
+                display: grid;
+                align-items: flex-end;
+                padding: 2px 0 2px 2px;
+            }
+
+            p {
+                grid-area: 5 / 1 / 6 / 4;
+                display: grid;
+                align-items: flex-start;
+                padding: 0 0 2px 2px;
+            }
+
+            .btn__like {
+                grid-area: 4 / 5 / 6 / 6;
+                position: relative;
+                display: grid;
+                align-items: center;
+                height: min-content;
+                margin: auto;
+                transition: all 200ms ease-in-out;
+
+                .heart-away {
+                    transition: all 200ms ease-in-out;
+
+                    &:hover {
+                        .heart-away {
+                            opacity: 0;
+                        }
+                    }
+                }
+
+                button {
+                    position: relative;
+
+                    i {
+                        top: 0;
+                        right: 0;
+                        font-size: 40px;
+                    }
+                }
+
+                .heart-hover {
+                    position: absolute;
+                    color: transparent;
+                    background-image: radial-gradient(100% 50% at 20% 10%, #FF79DA 0%, #9356DC 200%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    opacity: 0;
+                    transition: all 200ms ease-in-out;
+
+
+                    &:hover {
+                        opacity: 1;
+                        animation: fadeIn-heart 1s ease 0s 1 normal forwards;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+    /*Fin section restaurant*/
